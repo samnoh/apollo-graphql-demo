@@ -1,15 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import styled from 'styled-components';
 
 import Movie from '../components/Movie';
-
-const Container = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 0.7fr);
-    flex-wrap: wrap;
-    justify-items: center;
-`;
+import { Container } from '../styles/card';
+import { MainTitle } from '../styles/title';
 
 const MoviesContainer = ({ loading, data, error }) => {
     if (loading) return 'Loading...';
@@ -20,7 +14,7 @@ const MoviesContainer = ({ loading, data, error }) => {
             <Helmet>
                 <title>Movies | {'' + data.movies.length}</title>
             </Helmet>
-            <h1>Movies</h1>
+            <MainTitle>Movies</MainTitle>
             <Container>
                 {data.movies.map(movie => (
                     <Movie key={movie.id} {...movie} />

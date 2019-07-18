@@ -3,6 +3,9 @@ import Helmet from 'react-helmet';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
+import { MainTitle } from '../styles/title';
+import { boxShadow } from '../styles/mixins';
+
 const Container = styled.div`
     display: flex;
     align-items: center;
@@ -13,7 +16,7 @@ const Image = styled.img`
     width: 300px;
     flex-shrink: 0;
     border-radius: 7px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    ${boxShadow}
 `;
 
 const Info = styled.div`
@@ -70,7 +73,7 @@ const MovieDetails = ({
         <>
             <Helmet>
                 <title>
-                    {title} - {'' + rating}
+                    {title} ({'' + year}) - {'' + rating}
                 </title>
             </Helmet>
             <div onClick={() => history.goBack()}>
@@ -78,9 +81,9 @@ const MovieDetails = ({
                     <i className="fas fa-chevron-left fa-sm" /> Back
                 </BackButton>
             </div>
-            <h1>
+            <MainTitle>
                 {title} <Year>{year}</Year>
-            </h1>
+            </MainTitle>
             <Container>
                 <div>
                     <Image src={medium_cover_image} alt={`${title} - Poster`} />
