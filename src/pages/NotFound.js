@@ -1,14 +1,20 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-import { MainTitle, SubTitle } from '../styles/title';
+import { MainTitle } from '../styles/title';
+import { BackButton } from '../styles/buttons';
 
-const NotFound = () => {
+const NotFound = ({ history }) => {
     return (
         <>
-            <MainTitle>Not Found</MainTitle>
-            <SubTitle>404</SubTitle>
+            <div onClick={() => history.goBack()}>
+                <BackButton>
+                    <i className="fas fa-chevron-left fa-sm" /> Back
+                </BackButton>
+            </div>
+            <MainTitle>Not Found - 404</MainTitle>
         </>
     );
 };
 
-export default NotFound;
+export default withRouter(NotFound);

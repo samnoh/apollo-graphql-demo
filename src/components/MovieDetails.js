@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 import { MainTitle } from '../styles/title';
 import { boxShadow } from '../styles/mixins';
+import { BackButton } from '../styles/buttons';
 
 const Container = styled.div`
     display: flex;
@@ -28,18 +29,6 @@ const Rating = styled.div`
     margin-top: 5px;
     font-weight: 600;
     font-size: 28px;
-`;
-
-const BackButton = styled.button`
-    cursor: pointer;
-    position: absolute;
-    top: 17px;
-    margin-left: 105px;
-    border: none;
-    background-color: transparent;
-    font-size: 17px;
-    color: gray;
-    font-weight: 400;
 `;
 
 const Year = styled.span`
@@ -68,7 +57,6 @@ const MovieDetails = ({
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [title, year]); // just in case of the same titles :)
-
     return (
         <>
             <Helmet>
@@ -88,7 +76,7 @@ const MovieDetails = ({
                 <div>
                     <Image src={medium_cover_image} alt={`${title} - Poster`} />
                     <Info>
-                        <Rating>{rating}</Rating>
+                        <Rating>{rating.toFixed(1)}</Rating>
                         <div>{language}</div>
                     </Info>
                 </div>
