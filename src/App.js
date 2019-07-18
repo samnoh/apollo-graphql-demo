@@ -10,7 +10,10 @@ const App = () => {
     return (
         <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route path="/movies/:movieId" component={MoviePage} />
+            <Route
+                path="/movie/:movieId"
+                render={({ match }) => <MoviePage movieId={match.params.movieId} />}
+            />
             <Route component={NotFound} />
         </Switch>
     );

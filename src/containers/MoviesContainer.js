@@ -6,7 +6,7 @@ const MoviesContainer = ({ loading, data, error }) => {
     if (loading) return 'Loading...';
     if (error) return 'Something went wrong';
 
-    return data.movies.map(movie => <Movie {...movie} />);
+    return data.movies.map(movie => <Movie key={movie.id} {...movie} />);
 };
 
 export default MoviesContainer;

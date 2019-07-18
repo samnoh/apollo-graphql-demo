@@ -1,7 +1,15 @@
 import React from 'react';
+import { Query } from 'react-apollo';
 
-const Movie = () => {
-    return <h1>Movies</h1>;
+import { MOVIE_PAGE } from '../apollo/queries';
+import MovieContainer from '../containers/MovieContainer';
+
+const Movie = ({ movieId }) => {
+    return (
+        <Query query={MOVIE_PAGE} variables={{ movieId: +movieId }}>
+            {props => <MovieContainer id={movieId} {...props} />}
+        </Query>
+    );
 };
 
 export default Movie;
