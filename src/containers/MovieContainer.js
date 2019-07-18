@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import MovieDetails from '../components/MovieDetails';
 import { Container, CardContainer, CardImage, CardTitle } from '../styles/card';
-
 import { SubTitle } from '../styles/title';
 import trimTitle from '../utils/trimTitle';
 

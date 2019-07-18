@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { MainTitle, SubTitle } from '../styles/title';
+
 const NotFound = () => {
     return (
         <>
-            <h1>Not Found</h1>
-            <h2>404</h2>
+            <MainTitle>Not Found</MainTitle>
+            <SubTitle>404</SubTitle>
         </>
     );
 };
