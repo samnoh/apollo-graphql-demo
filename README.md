@@ -63,7 +63,7 @@ const TestPage = () => {
 
 ### graphql-tag
 
--   Just query
+-   Query without variables
 
 ```JavaScript
 import gql from 'graphql-tag';
