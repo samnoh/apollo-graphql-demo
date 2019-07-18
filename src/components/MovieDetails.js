@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Helmet from 'react-helmet';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
@@ -62,6 +62,10 @@ const MovieDetails = ({
     description_intro,
     history
 }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [title, year]); // just in case of the same titles :)
+
     return (
         <>
             <Helmet>
