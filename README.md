@@ -4,6 +4,7 @@
 -   react-router-dom
 -   react-helmet
 -   @loadable/component
+-   styled-components
 
 ## TIL
 
