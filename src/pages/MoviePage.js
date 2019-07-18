@@ -7,7 +7,7 @@ import MovieContainer from '../containers/MovieContainer';
 const Movie = ({ movieId }) => {
     return (
         <Query query={MOVIE_PAGE} variables={{ movieId: +movieId }}>
-            {props => <MovieContainer id={movieId} {...props} />}
+            {props => <MovieContainer {...props} />}
         </Query>
     );
 };
