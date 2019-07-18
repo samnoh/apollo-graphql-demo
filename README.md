@@ -8,9 +8,7 @@
 
 ## Screenshots
 
-<p align="center"><img src="/img/Home.png" width="300px"></p>
-
-<p align="center"><img src="/img/Movie.png" width="300px"></p>
+<p align="center"><img src="/img/Home.png" width="500px"><img src="/img/Movie.png" width="500px"></p>
 
 ## TIL
 
